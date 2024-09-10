@@ -1,0 +1,95 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 40%;
+  min-height: 80vh;
+  margin: 0 auto;
+  height: 100%;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+.container .add-task-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 14px;
+}
+
+.container .add-task-wrapper button {
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 12px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.container .add-task-wrapper input {
+  border: 1px solid black;
+  padding: 12px 14px;
+  border-radius: 6px;
+  flex-grow: 1;
+}
+
+.container .add-task-wrapper button:hover {
+  background-color: black;
+  color: white;
+}
+
+.container .task-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container .task-wrapper h4 {
+  margin-bottom: 0px;
+}
+
+.container .task-wrapper .task-not-checked,
+.container .task-wrapper .task-checked {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.container .task-wrapper .task-not-checked li {
+  display: flex;
+  text-decoration: none;
+  gap: 8px;
+  padding-block: 4px;
+}
+
+.container .task-wrapper .task-not-checked .task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .task-wrapper .task-not-checked p, input {
+  margin: 0px;
+}
+
+.container .task-wrapper .task-checked p {
+  text-decoration: line-through;
+  margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .container .add-task-wrapper input {
+    width: 100%;
+  }
+
+  .container .add-task-wrapper {
+    flex-wrap: wrap;
+  }
+}
